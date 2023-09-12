@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="{% url 'main:confirm' %}" method="post">
+        {% csrf_token %}
+        <label for="access_code">Your Code</label>
+        <input id="access_code" type="number" name='access_code'>
+        <input type="submit" value="Confirm">
+    </form>
+</body>
+</html>
